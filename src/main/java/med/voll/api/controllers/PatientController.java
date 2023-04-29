@@ -24,7 +24,7 @@ public class PatientController {
     }
 
     @GetMapping
-    public Page<PatientRecord> listPatient(@PageableDefault(page = 0, size = 10, sort = {"nome"}) Pageable page) {
+    public Page<PatientRecord> listPatient(@PageableDefault(page = 0, size = 10, sort = {"name"}) Pageable page) {
         return service.list(page);
     }
 }
