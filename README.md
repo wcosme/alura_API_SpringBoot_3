@@ -15,10 +15,48 @@
 <p><strong>Formato do JSON</strong></p>
 
 	{
-		"cep":"String", 
-		"complemento": "String",
-		"numero": "Numeric"
-	}
+    "content": [
+        {
+            "id": 1,
+            "name": "Viviane Gonçalves",
+            "email": "viviane.goncalves@voll.med",
+            "crm": "102040",
+            "specialty": "GINECOLOGIA"
+        },
+        {
+            "id": 2,
+            "name": "Wallace Gonçalves",
+            "email": "wallace.goncalves@voll.med",
+            "crm": "102050",
+            "specialty": "CARDIOLOGIA"
+        }
+    ],
+    "pageable": {
+        "sort": {
+            "empty": true,
+            "sorted": false,
+            "unsorted": true
+        },
+        "offset": 0,
+        "pageSize": 20,
+        "pageNumber": 0,
+        "unpaged": false,
+        "paged": true
+    },
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 2,
+    "size": 20,
+    "number": 0,
+    "sort": {
+        "empty": true,
+        "sorted": false,
+        "unsorted": true
+    },
+    "first": true,
+    "numberOfElements": 2,
+    "empty": false
+}
 
 <p text-align = justify>Payload de response. </p>
 
