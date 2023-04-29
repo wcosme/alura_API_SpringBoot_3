@@ -13,23 +13,26 @@
 <p text-align = justify>Envie uma requisição POST para o projeto na seguinte rota: <strong> http://localhost:8080/api/v1/doctors </strong></p>
 
 <p><strong>Formato do JSON</strong></p>
+	
+```json
 
-{
-"name": "Teste",
-"email": "teste.goncalves@voll.med",
-"crm": "102050",
-"telephone": "(21)99999-9999",
-"specialty": "CARDIOLOGIA",
-"address": {
-    "street": "Rua Teste",
-    "neighborhood": "Teste",
-    "postcode": "21235070",
-    "city": "Rio de Janeiro",
-    "state": "RJ",
-    "number": "100",
-    "complement": "casa 1"
-    }
-}
+	{
+	"name": "Teste",
+	"email": "teste.goncalves@voll.med",
+	"crm": "102050",
+	"telephone": "(21)99999-9999",
+	"specialty": "CARDIOLOGIA",
+	"address": {
+	    "street": "Rua Teste",
+	    "neighborhood": "Teste",
+	    "postcode": "21235070",
+	    "city": "Rio de Janeiro",
+	    "state": "RJ",
+	    "number": "100",
+	    "complement": "casa 1"
+	    }
+	}
+```
 
 <p text-align = justify>Payload de response. </p>
 
