@@ -1,4 +1,3 @@
-# alura_API_SpringBoot_3
 API de estudo da nova versão do SpringBoot 3 com as tecnologias: Spring Boot 3, Java 17, Lombok, MySQL/ Flyway, JPA/Hibernate, Maven e Insomnia
 
 <h1 align="left"><strong>Alura API SpringBoot 3</strong></h1>
