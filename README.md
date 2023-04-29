@@ -34,8 +34,4 @@
 	}
 ```
 
-<p text-align = justify>Payload de response. </p>
-
-
-<p><strong>Formato do JSON</strong></p>
 </div>
