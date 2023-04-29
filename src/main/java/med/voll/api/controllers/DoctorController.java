@@ -26,8 +26,8 @@ public class DoctorController {
     }
 
     @GetMapping()
-    public Page<ListDoctorRecord> list(Pageable paginacao){
-        return service.listDoctors(paginacao);
+    public Page<ListDoctorRecord> list(Pageable page){
+        return service.listDoctors(page);
     }
 
     @PutMapping()
