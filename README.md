@@ -14,7 +14,7 @@
 
 <p><strong>Formato do JSON</strong></p>
 
-	{
+{
 "name": "Teste",
 "email": "teste.goncalves@voll.med",
 "crm": "102050",
