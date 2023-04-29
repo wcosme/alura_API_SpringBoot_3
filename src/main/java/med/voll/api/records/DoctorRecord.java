@@ -5,28 +5,28 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import med.voll.api.Enuns.Especialidade;
+import med.voll.api.Enuns.Specialty;
 
-public record MedicoRecord(
+public record DoctorRecord(
 
         @NotBlank
-        String nome,
+        String name,
 
         @NotBlank
         @Email
         String email,
 
         @NotBlank
-        String telefone,
+        String telephone,
 
         @NotBlank
         @Pattern(regexp = "\\d{4,6}")
         String crm,
 
         @NotNull
-        Especialidade especialidade,
+        Specialty specialty,
 
         @NotNull
         @Valid
-        EnderecoRecord endereco) {
+        AddressRecord address) {
 }

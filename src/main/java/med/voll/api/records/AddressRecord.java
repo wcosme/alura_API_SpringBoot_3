@@ -3,19 +3,19 @@ package med.voll.api.records;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
-public record EnderecoRecord(
+public record AddressRecord(
 
         @NotBlank
-        String logradouro,
+        String street,
         @NotBlank
-        String bairro,
+        String neighborhood,
         @NotBlank
         @Pattern(regexp = "\\d{8}")
-        String cep,
+        String postcode,
         @NotBlank
-        String cidade,
+        String city,
         @NotBlank
-        String uf,
-        String complemento,
-        String numero) {
+        String state,
+        String complement,
+        String number) {
 }

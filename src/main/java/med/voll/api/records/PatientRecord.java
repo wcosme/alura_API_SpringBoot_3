@@ -6,16 +6,16 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
-public record PacienteRecord(
+public record PatientRecord(
 
         @NotBlank
-        String nome,
+        String name,
         @NotBlank @Email
         String email,
         @NotBlank
-        String telefone,
+        String telephone,
         @NotBlank @Pattern(regexp = "\\d{3}\\.?\\d{3}\\.?\\d{3}\\-?\\d{2}")
         String cpf,
         @NotNull @Valid
-        EnderecoRecord endereco) {
+        AddressRecord address) {
 }

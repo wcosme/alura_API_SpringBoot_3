@@ -1,6 +1,6 @@
 package med.voll.api.Enuns;
 
-public enum Especialidade {
+public enum Specialty {
 
     ORTOPEDIA,
     CARDIOLOGIA,
