@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/vi/patients")
+@RequestMapping("api/v1/patients")
 public class PatientController {
 
     @Autowired
