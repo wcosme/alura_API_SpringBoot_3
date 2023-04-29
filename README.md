@@ -1,10 +1,7 @@
-API de estudo da nova versão do SpringBoot 3 com as tecnologias: Spring Boot 3, Java 17, Lombok, MySQL/ Flyway, JPA/Hibernate, Maven e Insomnia
-
 <h1 align="left"><strong>Alura API SpringBoot 3</strong></h1>
-<p align="left">Este repositório possui dois projetos demonstrando o funcionamento do <strong> Spring Cloud Feign com Kafka no Docker</strong>. Um microservice cliente para consumir a API de CEP
- usando o Feign e produzir mensagens para o kafka e um microservice consumidor que fará a leitura e a persistencia das mensagens no banco H2 em memória.</p>
+<p align="left">API de estudo da nova versão do SpringBoot 3 com as tecnologias: Spring Boot 3, Java 17, Lombok, MySQL/ Flyway, JPA/Hibernate, Maven e Insomnia.</p>
 <h1 align="center">
-    <a href="https://kafka.apache.org/">🔗 Kakfa</a>
+    <a href="https://kafka.apache.org/">🔗 Spring Boot 3</a>
 </h1>
 
 <h2 align="center"> 
