@@ -7,10 +7,7 @@
 <h2 align="center"> 
 	Running 🚀
 </h2>
-<p align="left">1º É necessário que você tenha o docker instalado em seu ambiente de trabalho</p>
-<p align="left">2º Para subir o Kafka com o Zookeeper, execute o arquivo docker-compose.yml com o seguinte comando: docker-compose up -d </p>
-<p align="left">3º Execute os dois projetos</p>
-<p align="left">4º Envie uma requisição POST para o projeto produtor na seguinte rota: <strong> http://localhost:8081/api/v1/address </strong></p>
+<p align="left">Envie uma requisição POST para o projeto na seguinte rota: <strong> http://localhost:8080/api/v1/doctors </strong></p>
 
 <p><strong>Formato do JSON</strong></p>
 
@@ -20,5 +17,58 @@
 		"numero": "Numeric"
 	}
 
-<p align="left">5º Confira no KAFDROP as mensagens que foram enviadas para o Kafka. </p>
-<p align="left">6º Confira no banco H2 (em memória) as mensgagens salvas: <strong> http://localhost:8080/h2-console</strong></p>
+<p align="left">Payload de response. </p>
+
+
+<p><strong>Formato do JSON</strong></p>
+
+{
+    "content": [
+        {
+            "id": 1,
+            "nome": "Wallace Gonçalves",
+            "email": "wallace.goncalves@voll.med",
+            "crm": "222545",
+            "especialidade": "CARDIOLOGIA"
+        },
+        {
+            "id": 2,
+            "nome": "Teste Gonçalves",
+            "email": "teste.goncalves@voll.med",
+            "crm": "111222",
+            "especialidade": "CARDIOLOGIA"
+        },
+        {
+            "id": 4,
+            "nome": "Viviane Gonçalves",
+            "email": "viviane.goncalves@voll.med",
+            "crm": "102040",
+            "especialidade": "GINECOLOGIA"
+        }
+    ],
+    "pageable": {
+        "sort": {
+            "empty": true,
+            "sorted": false,
+            "unsorted": true
+        },
+        "offset": 0,
+        "pageNumber": 0,
+        "pageSize": 20,
+        "unpaged": false,
+        "paged": true
+    },
+    "last": true,
+    "totalElements": 3,
+    "totalPages": 1,
+    "size": 20,
+    "number": 0,
+    "sort": {
+        "empty": true,
+        "sorted": false,
+        "unsorted": true
+    },
+    "first": true,
+    "numberOfElements": 3,
+    "empty": false
+}
