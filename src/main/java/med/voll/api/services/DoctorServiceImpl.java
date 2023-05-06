@@ -18,13 +18,12 @@ public class DoctorServiceImpl implements DoctorService {
 
     @Override
     public void save(Doctor doctor) {
-
         repository.save(doctor);
     }
 
     @Override
     public Page<ListDoctorRecord> listDoctors(Pageable page) {
-        return repository.findAll(page).map(ListDoctorRecord::new);
+        return repository.findAllActiveTrue(page).map(ListDoctorRecord::new);
     }
 
     @Override
@@ -34,6 +33,10 @@ public class DoctorServiceImpl implements DoctorService {
 
     @Override
     public void deleteDoctorById(Long id) {
-        repository.deleteById(id);
+         Optional<Doctor> doctor = repository.findById(id);
+
+         if(doctor.isPresent()) {
+             doctor.get().deleteDoctor();
+         }
     }
 }

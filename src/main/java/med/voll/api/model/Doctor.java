@@ -31,7 +31,10 @@ public class Doctor {
     @Embedded
     private Address address;
 
+    private Boolean active;
+
     public Doctor(DoctorRecord record) {
+        this.active = true;
         this.name = record.name();
         this.email = record.email();
         this.crm = record.crm();
@@ -51,6 +54,10 @@ public class Doctor {
         if(record.address() != null){
             this.address.updateInformationAddress(record.address());
         }
+    }
+
+    public void deleteDoctor(){
+        this.active = false;
     }
 
 }

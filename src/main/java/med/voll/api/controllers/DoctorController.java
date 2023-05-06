@@ -24,13 +24,11 @@ public class DoctorController {
     @PostMapping()
     @Transactional
     public void register(@RequestBody @Valid DoctorRecord dto){
-
         service.save(new Doctor(dto));
     }
 
     @GetMapping()
     public Page<ListDoctorRecord> list(Pageable page){
-
         return service.listDoctors(page);
     }
 
@@ -48,6 +46,5 @@ public class DoctorController {
     @Transactional
     public void delete(@PathVariable Long id){
         service.deleteDoctorById(id);
-
     }
 }
