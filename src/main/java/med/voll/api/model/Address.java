@@ -30,4 +30,28 @@ public class Address {
         this.complement = address.complement();
     }
 
+    public void updateInformationAddress(Address updateAddress) {
+
+        if(updateAddress.street != null){
+            this.street = updateAddress.street;
+        }
+        if(updateAddress.neighborhood != null){
+            this.neighborhood = updateAddress.neighborhood;
+        }
+        if(updateAddress.postcode != null){
+            this.postcode = updateAddress.postcode;
+        }
+        if(updateAddress.number != null){
+            this.number = updateAddress.number;
+        }
+        if(updateAddress.complement != null){
+            this.complement = updateAddress.complement;
+        }
+        if(updateAddress.city != null){
+            this.city = updateAddress.city;
+        }
+        if(updateAddress.state != null){
+            this.state = updateAddress.state;
+        }
+    }
 }

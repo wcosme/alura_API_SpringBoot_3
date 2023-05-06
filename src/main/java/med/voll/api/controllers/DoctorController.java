@@ -12,6 +12,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("api/v1/doctors")
 public class DoctorController {
@@ -22,17 +24,30 @@ public class DoctorController {
     @PostMapping()
     @Transactional
     public void register(@RequestBody @Valid DoctorRecord dto){
+
         service.save(new Doctor(dto));
     }
 
     @GetMapping()
     public Page<ListDoctorRecord> list(Pageable page){
+
         return service.listDoctors(page);
     }
 
-    @PutMapping()
+    @PatchMapping
     @Transactional
-    public void update(@RequestBody @Valid UpdateDoctorRecord dto){
+    public void update(@RequestBody @Valid UpdateDoctorRecord record){
+        Optional<Doctor> doctor = service.getDoctorById(record.id());
+
+        if(doctor.isPresent()){
+            doctor.get().updateInformation (record);
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void delete(@PathVariable Long id){
+        service.deleteDoctorById(id);
 
     }
 }

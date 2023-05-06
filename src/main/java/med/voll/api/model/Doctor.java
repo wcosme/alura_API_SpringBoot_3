@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.Enuns.Specialty;
 import med.voll.api.records.DoctorRecord;
+import med.voll.api.records.UpdateDoctorRecord;
 
 @Table(name = "doctors")
 @Entity(name = "Doctor")
@@ -37,6 +38,19 @@ public class Doctor {
         this.telephone = record.telephone();
         this.specialty = record.specialty();
         this.address = new Address(record.address());
+    }
+
+    public void updateInformation(UpdateDoctorRecord record){
+
+        if(record.name() != null){
+            this.name = record.name();
+        }
+        if(record.telephone() != null){
+            this.telephone = record.telephone();
+        }
+        if(record.address() != null){
+            this.address.updateInformationAddress(record.address());
+        }
     }
 
 }

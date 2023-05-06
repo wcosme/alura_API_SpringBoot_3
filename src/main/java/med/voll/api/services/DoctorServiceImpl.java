@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class DoctorServiceImpl implements DoctorService {
 
@@ -23,5 +25,15 @@ public class DoctorServiceImpl implements DoctorService {
     @Override
     public Page<ListDoctorRecord> listDoctors(Pageable page) {
         return repository.findAll(page).map(ListDoctorRecord::new);
+    }
+
+    @Override
+    public Optional<Doctor> getDoctorById(Long id) {
+        return repository.findById(id);
+    }
+
+    @Override
+    public void deleteDoctorById(Long id) {
+        repository.deleteById(id);
     }
 }
