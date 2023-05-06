@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DoctorRepository extends JpaRepository<Doctor, Long> {
-    Page<Doctor> findAllActiveTrue(Pageable page);
+    Page<Doctor> findAllByActiveTrue(Pageable page);
 }

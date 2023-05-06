@@ -23,7 +23,7 @@ public class DoctorServiceImpl implements DoctorService {
 
     @Override
     public Page<ListDoctorRecord> listDoctors(Pageable page) {
-        return repository.findAllActiveTrue(page).map(ListDoctorRecord::new);
+        return repository.findAllByActiveTrue(page).map(ListDoctorRecord::new);
     }
 
     @Override
