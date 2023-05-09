@@ -35,6 +35,14 @@ public class DoctorController {
         return ResponseEntity.created(uri).body(new DoctorDetail(doctor));
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity detailById(@PathVariable Long id){
+        Optional<Doctor> doctor = service.detailById(id);
+
+        return ResponseEntity.ok(new DoctorDetail(doctor.get()));
+    }
+
+
     @GetMapping()
     public ResponseEntity<Page<ListDoctorRecord>> list(Pageable page){
 

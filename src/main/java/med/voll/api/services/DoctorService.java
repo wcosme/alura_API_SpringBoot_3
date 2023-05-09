@@ -15,4 +15,6 @@ public interface DoctorService {
     Optional<Doctor> getDoctorById(Long id);
 
     void deleteDoctorById(Long id);
+
+    Optional<Doctor> detailById(Long id);
 }

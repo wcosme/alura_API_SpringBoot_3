@@ -39,4 +39,9 @@ public class DoctorServiceImpl implements DoctorService {
              doctor.get().deleteDoctor();
          }
     }
+
+    @Override
+    public Optional<Doctor> detailById(Long id) {
+        return repository.findById(id);
+    }
 }
