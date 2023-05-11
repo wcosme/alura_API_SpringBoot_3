@@ -28,6 +28,7 @@ public class DoctorServiceImpl implements DoctorService {
 
     @Override
     public Optional<Doctor> getDoctorById(Long id) {
+
         return repository.findById(id);
     }
 
