@@ -9,24 +9,24 @@ import med.voll.api.Enuns.Specialty;
 
 public record DoctorRecord(
 
-        @NotBlank
+        @NotBlank(message = "{name.obrigatorio}")
         String name,
 
-        @NotBlank
-        @Email
+        @NotBlank(message = "{email.obrigatorio}")
+        @Email(message = "{email.invalido}")
         String email,
 
-        @NotBlank
+        @NotBlank(message = "{telephone.obrigatorio}")
         String telephone,
 
-        @NotBlank
+        @NotBlank(message = "{crm.obrigatorio}")
         @Pattern(regexp = "\\d{4,6}")
         String crm,
 
-        @NotNull
+        @NotNull(message = "{specialty.obrigatoria}")
         Specialty specialty,
 
-        @NotNull
+        @NotNull@NotNull(message = "{address.obrigatorio}")
         @Valid
         AddressRecord address) {
 }
